@@ -1,5 +1,17 @@
-<form [formGroup]="registerUser" (submit)="submit()">
-    <input type="email" name="name" formControlName="email">
-    <input type="password" name="name" formControlName="password">
-    <button type="submit">Submit</button>
-</form>
+<main>
+	<div id="auth">
+		<h1><strong>Welcome.</strong> Please login.</h1>
+		<form [formGroup]="registerUser" (submit)="submit()">
+			<p><input type="email" formControlName="email" placeholder="Email"></p>
+			<p><input type="password" formControlName="password" placeholder="Password"></p>
+			<p><a href="#">Forgot Password?</a></p>
+            <p><input type="submit" value="Sign up"></p>
+        </form>
+        <p>
+            <span class="btn-round">or</span>
+        </p>
+        <p>
+            <button class="btn" (click)="navigateToLogin()"><strong>Login</strong></button>
+        </p>
+    </div>
+</main> 

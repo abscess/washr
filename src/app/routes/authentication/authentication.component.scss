@@ -1,0 +1,304 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300');
+
+/* reset css */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*  Share element */
+
+[class*='fontawesome-']:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+main {
+  font: 100%/1.5em 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+input[type='submit'],
+button {
+  outline: none;
+}
+
+input[type='submit']:active {
+  opacity: 0.5;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+h1 {
+  font: inherit;
+  font-size: 1em;
+  color: #fff;
+}
+
+h1,
+p {
+  margin-bottom: 0.625em;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Auth page */
+
+#auth {
+  margin: 3.125em auto;
+  width: 18.75em;
+}
+
+form input[type='email'],
+input[type='password'] {
+  background: #e5e5e5;
+  border: none;
+  border-radius: 0.25em;
+  color: #5a5656;
+  font-family: inherit;
+  font-size: 1em;
+  height: 3.125em;
+  outline: none;
+  padding: 0em 0.625em;
+  width: 17.5em;
+  -webkit-appearance: none;
+}
+
+form input[type='submit'] {
+  background-color: #ff133d;
+  border: none;
+  border-radius: 0.25em;
+  color: #f4f4f4;
+  cursor: pointer;
+  font-family: inherit;
+  height: 3.125em;
+  text-transform: uppercase;
+  width: 18.75em;
+  -webkit-appearance: none;
+}
+
+.btn {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 0.25em;
+  color: #5a5656;
+  cursor: pointer;
+  font-family: inherit;
+  height: 3.125em;
+  text-transform: uppercase;
+  width: 18.75em;
+  -webkit-appearance: none;
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+form a {
+  color: #ffffff;
+  font-size: 0.75em;
+}
+
+form a:hover {
+  text-decoration: underline;
+}
+
+.btn-round {
+  background: #5a5656;
+  border-radius: 50%;
+  color: #f4f4f4;
+  display: block;
+  font-size: 1em;
+  height: 3.125em;
+  line-height: 3.125em;
+  margin: 1.875em 7.8125em;
+  text-align: center;
+  text-transform: uppercase;
+  width: 3.125em;
+}
+
+.google-before {
+  background: #dd4b39;
+  border-radius: 0.25em 0em 0em 0.25em;
+  color: #f4f4f4;
+  display: block;
+  float: left;
+  height: 3.125em;
+  line-height: 3.125em;
+  text-align: center;
+  width: 3.125em;
+}
+
+.google {
+  background: #dc7461;
+  border: none;
+  border-radius: 0em 0.25em 0.25em 0em;
+  color: #f4f4f4;
+  cursor: pointer;
+  height: 3.125em;
+  text-transform: uppercase;
+  width: 15.625em;
+  &:active {
+    background-color: #dd4b39;
+  }
+}
+
+.github-before {
+  background: #333333;
+  border-radius: 0.25em 0em 0em 0.25em;
+  color: #f4f4f4;
+  display: block;
+  float: left;
+  height: 3.125em;
+  line-height: 3.125em;
+  text-align: center;
+  width: 3.125em;
+}
+
+.github {
+  background: #515151;
+  border: none;
+  border-radius: 0em 0.25em 0.25em 0em;
+  color: #f4f4f4;
+  cursor: pointer;
+  height: 3.125em;
+  text-transform: uppercase;
+  width: 15.625em;
+  &:active {
+    background-color: #333333;
+  }
+}

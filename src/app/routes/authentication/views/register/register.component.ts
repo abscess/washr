@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+  styleUrls: ['../../authentication.component.scss', './register.component.scss']
 })
 export class RegisterComponent implements OnInit {
   registerUser: FormGroup = new FormGroup({
@@ -34,5 +34,9 @@ export class RegisterComponent implements OnInit {
           });
       })
       .catch(err => console.log(err));
+  }
+
+  navigateToLogin() {
+    this.router.navigate(['/auth', 'login']);
   }
 }

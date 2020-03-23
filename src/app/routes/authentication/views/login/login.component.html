@@ -1,16 +1,25 @@
 <main>
-  <h1>Log in to Washr</h1>
-  <section>
-    <form [formGroup]="loginInfo" (submit)="logInWithEmail()">
-      <input type="email" formControlName="email">
-      <input type="password" formControlName="password">
-      <button type="submit">Log in</button>
-    </form>
-  </section>
-  <ul>
-    <li><button (click)="navigateToRegister()">Register</button></li>
-    <li><button (click)="logInWithGoogle()">Log in with Google</button></li>
-    <li><button (click)="logInWithGithub()">Log in with Github</button></li>
-    <li><button (click)="logInWithSomethingElse()">Log in with something else</button></li>
-  </ul>
+	<div id="auth">
+	    <h1><strong>Welcome.</strong> Please login.</h1>
+		<form [formGroup]="loginInfo" (submit)="logInWithEmail()">
+			<p><input type="email" formControlName="email" placeholder="Email"></p>
+			<p><input type="password" formControlName="password" placeholder="Password"></p>
+			<p><a href="#">Forgot Password?</a></p>
+			<p><input type="submit" value="Login"></p>
+		</form>
+		<p>
+            <span class="btn-round">or</span>
+        </p>
+		<p>
+			<a class="google-before"><i class="fa fa-google"></i></a>
+			<button class="google" (click)="logInWithGoogle()">Login Using Google</button>
+		</p>
+		<p>
+			<a class="github-before"><i class="fa fa-github"></i></a>
+            <button class="github" (click)="logInWithGithub()">Login Using Github</button>
+        </p>
+		<p>
+            <button class="btn" (click)="navigateToRegister()"><strong>Sign Up</strong></button>
+		</p>
+	</div>
 </main>
