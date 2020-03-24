@@ -1,0 +1,21 @@
+.btn {
+  background-color: #ffffff;
+  color: #5a5656;
+
+  border: none;
+  border-radius: 0.25em;
+
+  cursor: pointer;
+
+  text-transform: uppercase;
+  font-family: inherit;
+
+  height: 3.125em;
+  width: 100%;
+
+  -webkit-appearance: none;
+
+  &:active {
+    opacity: 0.5;
+  }
+}

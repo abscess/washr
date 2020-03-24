@@ -1,3 +1,5 @@
+@import 'src/styles/button.scss';
+
 @import '../../../../../mixins/breakpoints.scss';
 @import '../../../../../mixins/colorscheme.scss';
 
@@ -69,6 +71,7 @@
       box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     }
   }
+
   form {
     box-sizing: border-box;
     width: 100%;
@@ -78,11 +81,83 @@
     flex-direction: column;
   }
 
-  textarea,
+  label {
+    font-size: 24px;
+  }
+
   input[type='text'] {
     display: block;
     box-sizing: border-box;
     resize: none;
     width: 100%;
+    height: 50px;
+    font-size: 32px;
+    margin: 0.25em 0 0.5em 0;
+    padding: 0em 0.1em 0em 0.1em;
+    border-radius: 0.1em;
+  }
+
+  /* Checkbox 
+   * https://www.w3schools.com/howto/howto_css_custom_checkbox.asp
+   */
+
+  .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin: 1em 0 0.5em 0;
+    cursor: pointer;
+    font-size: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  .container input:checked ~ .checkmark {
+    background-color: #2196f3;
+  }
+
+  .checkmark:after {
+    content: '';
+    position: absolute;
+    display: none;
+  }
+
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
   }
 }

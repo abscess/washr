@@ -3,11 +3,14 @@
     <h2>New post</h2>
   </header>
   <form [formGroup]="post" (ngSubmit)="onSubmit()" #form>
-    <label>Title: <input type="text" formControlName="title"></label>
+    <label>Title <input type="text" formControlName="title"></label>
     <app-wysiwyg formControlName="content"></app-wysiwyg>
-    <label>Unsuitable for children <input type="checkbox" formControlName="isNSFW"></label>
     <app-upload formControlName="image"></app-upload>
-    <button type="submit">Send</button>
+    <label class="container">Unsuitable for children
+      <input type="checkbox" formControlName="isNSFW">
+      <span class="checkmark"></span>
+    </label>
+    <button class="btn" type="submit"><strong><font size="4">Send</font></strong></button>
   </form>
 </div>
 <progress *ngIf="progress" [value]="progress || 0" max="100"></progress>
