@@ -1,11 +1,21 @@
 <header>
-  <h1><a [routerLink]="'/'">{{ title }}</a></h1>
+  <h1><a class="title" [routerLink]="'/'">{{ title }}</a></h1>
   <section [ngClass]="['buttons', (buttonsHidden ? 'hidden' : '')]">
     <ng-container *ngIf="isLoggedIn">
-      <app-badge *ngIf="userInfo" [img]="userInfo.photoURL">{{ userInfo.displayName }}</app-badge>
-      <button *ngIf="showAdult" (click)="toggleShowAdult()">Switch to SFW</button>
-      <button *ngIf="!showAdult" (click)="toggleShowAdult()">Switch to NSFW</button>
-      <button (click)="logOut()">Log out</button>
+      <p class="wrapper">Save Mode</p>
+      <label class="wrapper switch">
+        <input (click)="toggleShowAdult()" [checked]="!showAdult" type="checkbox">
+        <span class="slider round"></span>
+      </label>
+      <div class="dropdown">
+        
+        <app-badge class="dropdown" *ngIf="userInfo" [img]="userInfo.photoURL"></app-badge>
+        <div class="dropdown-content">
+          <a class="menuitem" [routerLink]="link ? ['/userinfo', link] : ['/profile']">Welcome, <strong>{{ userInfo.displayName }}</strong></a>
+          <button class="menuitem" (click)="moveToProfileEdit()">View profile</button>
+          <button class="menuitem" (click)="logOut()">Log out</button>
+        </div>
+      </div>
     </ng-container>
   </section>
   <button class="hider" (click)="hideButtons()">{{ buttonsHidden ? 'Show' : 'Hide' }} buttons</button>

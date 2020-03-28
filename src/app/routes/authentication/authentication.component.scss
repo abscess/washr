@@ -144,11 +144,6 @@ main {
   margin: 0;
 }
 
-input[type='submit'],
-button {
-  outline: none;
-}
-
 input[type='submit']:active {
   opacity: 0.5;
 }
@@ -193,7 +188,6 @@ input[type='password'] {
   font-family: inherit;
   font-size: 1em;
   height: 3.125em;
-  outline: none;
   padding: 0em 0.625em;
   width: 17.5em;
   -webkit-appearance: none;
