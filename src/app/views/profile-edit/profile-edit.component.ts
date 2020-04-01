@@ -7,7 +7,7 @@ import { catchError } from 'rxjs/operators';
 @Component({
   selector: 'app-profile-edit',
   templateUrl: './profile-edit.component.html',
-  styleUrls: ['./profile-edit.component.scss']
+  styleUrls: ['../../../styles/button.scss', './profile-edit.component.scss']
 })
 export class ProfileEditComponent implements OnInit {
   profileEdit = new FormGroup({

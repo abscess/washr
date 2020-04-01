@@ -99,6 +99,14 @@ header {
 
 .newReply {
   grid-area: newReply;
+
+  .inner {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .reply {
     display: grid;
     grid-template-rows: auto auto;
@@ -118,6 +126,16 @@ header {
 
 .replies {
   grid-area: replies;
+}
+
+.btn-reply {
+  width: 80px;
+  height: 26.5px;
+  border-radius: 2px;
+  border: none;
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .error {

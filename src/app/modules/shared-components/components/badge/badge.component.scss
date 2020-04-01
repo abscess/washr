@@ -29,7 +29,9 @@
 }
 
 .avatar {
-  display: block;
+  display: flex;
+  flex-direction: center;
+  align-items: center;
   box-sizing: border-box;
   padding: 0.25em;
   width: 100%;
@@ -43,6 +45,7 @@
 }
 
 p {
+  font-weight: bold;
   margin: 0 1ch;
 }
 

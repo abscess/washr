@@ -15,7 +15,10 @@
     <button type="submit">Submit edit</button>
   </form>
   <div class="newReply">
-    <button (click)="toggleIsReply()">Reply</button>
+    <div class="inner">
+      <button class="btn-reply" (click)="toggleIsReply()">Reply</button>
+      <h4>Replies: {{ post.commentCount }}</h4>
+    </div>
     <progress *ngIf="progress" [value]="progress || 0" max="100"></progress>
     <div class="reply" *ngIf="isReply">
       <form [formGroup]="reply" (ngSubmit)="onSubmit()" #form>
@@ -28,7 +31,6 @@
     </div>
   </div>
   <div class="replies">
-    <h2>Replies: {{ post.commentCount }}</h2>
     <h3 *ngIf="displayShowMore" class="loadmore"><a [routerLink]="['/posts', 'post', post.id]">Load more replies</a></h3>
     <app-reply *ngFor="let reply of replies | async" [content]="reply" [class]="reply.image ? 'has-image' : ''"></app-reply>
   </div>
