@@ -1,5 +1,8 @@
 # Washr
 
+![](https://github.com/abscess/washr/blob/master/.gitassets/login.png)
+![](https://github.com/abscess/washr/blob/master/.gitassets/signup.png)
+
 ## What is it?
 
 Washr is my personal social media project. I got tired of Facebook's _terrible_ web app. (You'd think the creators of the most popular front-end framework would know a thing or two on how to write responsive websites and about feature parity and why feature disparity is bad, but this isn't a place for that sort of rant.) But at the same time, I realized that I really like the way Facebook is structured. I want the end goal of Washr to be a Facebook clone, while stripping the unnecessary Facebook features and throwing in some features from places like 4chan (the layout of the post and (in the future) the way you can reference other people's comments), regular forums (thread-reply layout) and some other ideas from social media. At the same time, I don't want it to grow _too_ out of control. For example, I don't think I'll be implementing any sort of messaging system, instead, I'd love to rely on something like XMPP, but I'm also really interested in things like WebSockets and **_GAH, THERE'S TOO MANY COOL THINGS TO LEARN, AND I'M JUST ONE MAN!_**

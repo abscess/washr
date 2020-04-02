@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router, RouterEvent, NavigationEnd, NavigationStart, NavigationCancel } from '@angular/router';
 import { NsfwService } from './services/nsfw.service';
@@ -22,6 +23,7 @@ export class AppComponent implements OnInit {
 
   // tslint:disable-next-line: max-line-length
   constructor(
+    private meta: Meta,
     public afAuth: AngularFireAuth,
     private router: Router,
     private nsfw: NsfwService,
@@ -38,6 +40,9 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.meta.addTag({ name: 'description', content: 'Washr is my personal social media project.' });
+    this.meta.addTag({ name: 'keywords', content: 'washr, imageboard, 4chan, facebook' });
+
     this.afAuth.user.subscribe(u => (u ? (this.isLoggedIn = true) : (this.isLoggedIn = false)));
     this.nsfw.nsfwStatus.subscribe(nsfw => (this.showAdult = nsfw));
     this.uS.loggedInUserData().subscribe((user: User) => (this.userInfo = user));

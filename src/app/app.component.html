@@ -10,8 +10,8 @@
       <div class="dropdown">
         
         <app-badge class="dropdown" *ngIf="userInfo" [img]="userInfo.photoURL"></app-badge>
-        <div class="dropdown-content">
-          <a class="menuitem" [routerLink]="link ? ['/userinfo', link] : ['/profile']">Welcome, <strong>{{ userInfo.displayName }}</strong></a>
+        <div class="dropdown-content" *ngIf="userInfo">
+          <a  class="menuitem" [routerLink]="['/profile']">Welcome, <strong>{{ userInfo.displayName }}</strong></a>
           <button class="menuitem" (click)="moveToProfileEdit()">View profile</button>
           <button class="menuitem" (click)="logOut()">Log out</button>
         </div>
